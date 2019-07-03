@@ -1,0 +1,19 @@
+1.2
+BEGIN
+	DECLARE exp AS INTEGER
+	PRINT " Years of Experience : "
+	ACCEPT exp
+
+	IF( 0 <= exp < 3) THEN
+		DISPLAY "Tag Color : BLUE"
+	
+	ELSE IF ( 3 <= exp < 5 ) THEN
+		DISPLAY "Tag Color : GREY"
+	
+	ELSE IF ( 5 <= exp < 10 ) THEN
+		DISPLAY "Tag Color : YELLOW"
+
+	ELSE IF ( exp > 10 ) THEN
+		DISPLAY "Tag Color : RED"
+	END IF
+END
