@@ -1,0 +1,20 @@
+1.3
+BEGIN
+	DECLARE n, num AS INTEGER
+	num1 = 0
+	num2 = 1
+	PROMPT " Enter n : " AND STORE IN n
+
+	PRINT num1
+	PRINT num2
+
+	FOR index = 1 to (n-2)
+		num = num1 + num2
+		PRINT num
+		num1 = num2
+		num2 = num
+		index = index + 1
+	END FOR
+END
+	
+	
