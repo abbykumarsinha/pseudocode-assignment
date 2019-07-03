@@ -1,0 +1,21 @@
+1.4
+BEGIN
+	DECLARE num AS INTEGER
+	sum = 0
+	PROMPT "Enter Number: " AND STORE IN num
+
+	WHILE ( num != 0 )
+	DO
+		n = num % 10
+		sum = n*n*n
+		num = num / 10
+	END WHILE
+
+	IF ( num = sum ) THEN 
+		PRINT "Number entered is an Armstrong Number"
+	ELSE
+		PRINT "Number entered is NOT an Armstrong Number"
+	END IF
+END
+	
+	
