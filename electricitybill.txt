@@ -1,0 +1,20 @@
+1.1
+BEGIN
+	DECLARE userID, last_month_meter, current_month_meter, unit_consumed, netAmt
+	AS INTEGER
+	DECLARE userName AS STRING
+	Fixed_Charge = 100
+
+	PROMPT "Enter User ID" AND STORE IN userID
+	PROMPT "Enter User Name" AND STORE IN userName
+	PROMPT "Enter last month meter reading" AND STORE IN last_month_meter
+	PROMPT "Enter current month meter reading" AND STORE IN current_month_meter
+	
+	unit_consumed = current_month_meter - last_month_meter
+	netAmt = unit_consumed*1.15 + Fixed_Charge
+
+	PRINT "User ID: " userID
+	PRINT "User Name: " userName
+	PRINT "Unit Consumed: " unit_consumed
+	PRINT "Net Amount: " netAmt
+END
