@@ -1,0 +1,42 @@
+1.6
+BEGIN
+	DECLARE num[10] AS INTEGER ARRAY
+	DECLARE small AS INTEGER
+	DECLARE even[10], odd[10] AS INTEGER ARRAY
+	
+	PRINT " Enter numbers: "
+	FOR index 0 to 9
+		ACCEPT num[index]
+		index = index + 1
+	END FOR
+	
+	FOR index 0 to 9
+		IF (num[index] > num[index+1]) THEN
+			small = num[index]
+		 	index = index + 1
+		ELSE
+			small = num[index+1]
+		 	index = index + 1
+		END IF
+	END FOR
+	PRINT " The Smallest Number in the Array is: " small
+
+	FOR index = 0 to 9
+		IF ( num[index]/2 = 0 ) THEN
+			FOR loop 0 to 9
+				even[loop] = num[index]
+			END FOR
+		ELSE
+			FOR loop 0 to 9
+				odd[loop] = num[index]
+			END FOR
+		END IF
+	END FOR
+	
+	FOR index 0 to 9
+		PRINT " Even numbers are: " even[index]
+		PRINT " Odd numbers are" " odd[index]
+	END FOR
+END
+
+	
